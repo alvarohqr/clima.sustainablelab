@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+  body, html{
+    margin: 0;
+    background: #2b2927;
+    font-family: 'Poppins', sans-serif;
+  }
+  h1{
+    margin: 5px;
+    text-align: center;
+    color:white;
+  }
+  .bs-example{
+        margin: 0px;
+    }
+  .container-all{
+    width: fit-content;
+    margin: 10px auto;
+    height: auto;
+  }
+  .container{
+    overflow:hidden;
+    height: fit-content;
+    margin:3px;
+    padding: 0;
+    display:block;
+    position:relative;
+    float:left;
+  }
+  
+  @media only screen and (max-width: 900px) {
+      .container {
+          width: calc(50% - 6px);
+      }
+  }
+  @media only screen and (max-width: 400px) {
+      .container {
+          width: 100%;
+      }
+  }

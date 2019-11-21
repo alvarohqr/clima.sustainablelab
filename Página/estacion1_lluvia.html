@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Historial lluvia | Estación #1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.ico" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link rel="stylesheet" href="estacion.css"> 
+    <script src="tablalink.js"></script>
+    <script src="datepicker.js"></script>
+</head>
+<body>
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">
+            <img src="ITSON_negativo.png" style="width:110px; height:48px;" alt="ITSON">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="index.html" class="nav-item nav-link">INICIO</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ESTACIONES</a>
+                    <div class="dropdown-menu">
+                        <a href="estacion1_data.php" class="dropdown-item">ESTACIÓN #1</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #2</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #3</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">GRÁFICOS</a>
+                    <div class="dropdown-menu">
+                        <a href="estacion1_gtemp.php" class="dropdown-item">ESTACIÓN #1</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #2</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #3</a>
+                    </div>
+                </div>
+            <div class="nav-item dropdown">
+                    <a href="#" class="nav-link active dropdown-toggle" data-toggle="dropdown">EXPORTAR DATOS</a>
+                    <div class="dropdown-menu">
+                        <a href="estacion1_full.html" class="dropdown-item">ESTACIÓN #1</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #2</a>
+                        <a href="#" class="dropdown-item">ESTACIÓN #3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<h1>Exportar Datos</h1>
+  <div class="container-all">
+
+    <div class="w3-container">
+  
+  <div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_full.html'">Full</button>
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_temp.html'">Temperatura</button>
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_hum.html'">Humedad</button>
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_prsn.html'">Presión</button>
+    <button class="w3-bar-item w3-button tablink w3-green" onclick="openprmtr(event,'Lluvia')">LLuvia</button>
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_viento.html'">Viento</button>
+    <button class="w3-bar-item w3-button tablink" role="link" onclick="location.href='estacion1_pm.html'">Partículas</button>
+  </div>
+  
+  <div id="Lluvia" class="w3-container w3-border parameter">
+    <br /> 
+    <form method="post" action="lluvia_export.php" align="center">   
+                <div class="col-md-2">  
+                     <input type="text" name="Desde" id="Desde" class="form-control" placeholder="Desde" />  
+                </div>  
+                <div class="col-md-2">  
+                     <input type="text" name="Hasta" id="Hasta" class="form-control" placeholder="Hasta" />  
+                </div>  
+                <div class="col-md-2">  
+                     <input type="submit" name="lluvia_export" id="lluvia_export" value="Exportar CSV" class="btn btn-success" />  
+                </div>  
+                <div style="clear:both"></div>
+                <br />  
+  </div>
+  </div>
+  </div>
+</body>
+</html>                            
